@@ -1,0 +1,9 @@
+{
+  "name": "mentor-advisors-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "serve": "npx --yes serve ."
+  }
+}
