@@ -26,6 +26,17 @@ test("contains required A2P disclosures", () => {
   assert.match(html, /Consent is not a condition of purchase/);
 });
 
+test("shows the business address in both compliance contact locations", () => {
+  const addressBlocks = [...html.matchAll(/<address[^>]*>([\s\S]*?)<\/address>/g)].map((match) => match[1]);
+
+  assert.equal(addressBlocks.length, 2);
+  for (const block of addressBlocks) {
+    assert.match(block, /Mentor Advisors Equity Group LLC/);
+    assert.match(block, /545 NE 141st St/);
+    assert.match(block, /North Miami, FL 33161-3128/);
+  }
+});
+
 test("defines the approved visual tokens", () => {
   assert.match(css, /--primary-blue:\s*#003d82/i);
   assert.match(css, /--accent-blue:\s*#0066cc/i);
