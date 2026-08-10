@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
+import { normalizePageId, showPage } from "../script.js";
 
 const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
 const css = await readFile(new URL("../styles.css", import.meta.url), "utf8");
@@ -36,4 +37,31 @@ test("supports routed visibility and responsive layout", () => {
   assert.match(css, /\.page-content\.active\s*\{[^}]*display:\s*block/s);
   assert.match(css, /@media\s*\(max-width:\s*768px\)/);
   assert.match(css, /:focus-visible/);
+});
+
+test("normalizes supported and unknown hashes", () => {
+  assert.equal(normalizePageId("#privacy"), "privacy");
+  assert.equal(normalizePageId("#sms-terms"), "sms-terms");
+  assert.equal(normalizePageId("#unknown"), "home");
+});
+
+test("showPage activates one view and scrolls to the top", () => {
+  const pages = ["home", "privacy", "sms-terms"].map((name) => ({
+    id: `${name}-page`,
+    classList: {
+      active: name === "home",
+      add(value) { if (value === "active") this.active = true; },
+      remove(value) { if (value === "active") this.active = false; }
+    }
+  }));
+  const documentRef = {
+    querySelectorAll: () => pages,
+    getElementById: (id) => pages.find((page) => page.id === id)
+  };
+  let scrollArgs;
+  const windowRef = { scrollTo: (...args) => { scrollArgs = args; } };
+
+  assert.equal(showPage("privacy", documentRef, windowRef), "privacy");
+  assert.equal(pages.find((page) => page.id === "privacy-page").classList.active, true);
+  assert.deepEqual(scrollArgs, [0, 0]);
 });
