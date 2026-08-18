@@ -37,6 +37,13 @@ test("shows the business address in both compliance contact locations", () => {
   }
 });
 
+test("uses the professional email address for every visible contact method", () => {
+  assert.doesNotMatch(html, /mentoradvisorsllc@gmail\.com/i);
+
+  const emailLinks = [...html.matchAll(/<a href="mailto:admin@mentoradvisors\.org">admin@mentoradvisors\.org<\/a>/g)];
+  assert.equal(emailLinks.length, 3);
+});
+
 test("defines the approved visual tokens", () => {
   assert.match(css, /--primary-blue:\s*#003d82/i);
   assert.match(css, /--accent-blue:\s*#0066cc/i);
