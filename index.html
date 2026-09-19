@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Mentor Advisors Equity Group supports its affiliated agent network with training, resources, updates, and operational communications.">
-  <title>Mentor Advisors Equity Group | Agent Support</title>
+  <meta name="description" content="Mentor Advisors Equity Group helps individuals and families find affordable health insurance, and supports its affiliated agent network with training, resources, and updates.">
+  <title>Mentor Advisors Equity Group | Affordable Health Insurance</title>
+  <link rel="icon" href="images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="styles.css">
@@ -16,13 +17,19 @@
     <header class="site-header">
       <div class="container header-inner">
         <a href="#home" id="nav-logo-link" class="brand" data-page="home">
-          <span class="brand-icon"><iconify-icon icon="lucide:shield-check"></iconify-icon></span>
+          <img class="brand-icon" src="images/logo.png" alt="Mentor Advisors Equity Group logo">
           <span class="brand-name">Mentor Advisors <span>Equity Group</span></span>
         </a>
         <nav class="primary-nav" aria-label="Primary navigation">
           <a href="#home" id="nav-home-link" data-page="home">Home</a>
-          <a href="#contact" id="nav-contact-link" class="nav-emphasis" data-scroll-target="contact">Stay Connected</a>
+          <a href="#about" id="nav-about-link" data-scroll-target="about">About</a>
+          <a href="#coverage" id="nav-coverage-link" data-scroll-target="coverage">Get Coverage</a>
+          <a href="#agents" id="nav-agents-link" data-scroll-target="agents">Agent Opportunities</a>
+          <a href="#contact" id="nav-contact-link" class="nav-emphasis" data-scroll-target="contact">Contact</a>
         </nav>
+        <a href="tel:8009883052" class="header-phone">
+          <iconify-icon icon="lucide:phone"></iconify-icon> 800-988-3052
+        </a>
       </div>
     </header>
 
@@ -31,13 +38,82 @@
         <div class="hero-pattern" aria-hidden="true"></div>
         <div class="container hero-inner">
           <div class="hero-copy">
-            <h1>Helping Our Agents Grow, Stay Informed &amp; Succeed</h1>
-            <p>Mentor Advisors Equity Group provides its agent network with resources, updates, training, support, and business-development communications.</p>
+            <span class="hero-eyebrow">People &nbsp;|&nbsp; Coverage &nbsp;|&nbsp; Brighter Tomorrows</span>
+            <h1>Affordable <span class="accent-green">Health Insurance</span> for a Brighter Tomorrow</h1>
+            <p>We help individuals and families find quality, affordable health insurance through the ACA Marketplace and top carriers — with expert guidance every step of the way.</p>
+            <ul class="hero-badges">
+              <li><iconify-icon icon="lucide:shield-check"></iconify-icon> Expert Guidance</li>
+              <li><iconify-icon icon="lucide:users"></iconify-icon> Personalized Support</li>
+              <li><iconify-icon icon="lucide:heart-pulse"></iconify-icon> Coverage You Can Afford</li>
+            </ul>
             <div class="hero-actions">
-              <a href="#contact" id="hero-cta-primary" class="button button-light" data-scroll-target="contact">Join Our Network</a>
-              <a href="#about" id="hero-cta-secondary" class="button button-outline">Learn More</a>
+              <a href="#contact" id="hero-cta-primary" class="button button-accent" data-scroll-target="contact">Get a Free Quote <iconify-icon icon="lucide:arrow-right"></iconify-icon></a>
+              <a href="tel:8009883052" id="hero-cta-secondary" class="button button-outline"><iconify-icon icon="lucide:phone"></iconify-icon> Speak With an Advisor</a>
+            </div>
+            <p class="hero-fineprint">SAME DAY SUPPORT &nbsp;·&nbsp; NO COST TO YOU &nbsp;·&nbsp; HIGH VOLUME READY</p>
+          </div>
+          <figure class="hero-media">
+            <img src="images/hero-family.jpg" alt="Smiling family — healthy families, stronger futures">
+          </figure>
+        </div>
+      </section>
+
+      <section id="coverage" class="section coverage-section">
+        <div class="container">
+          <div class="coverage-grid">
+            <article class="coverage-card">
+              <span class="card-icon"><iconify-icon icon="lucide:stethoscope"></iconify-icon></span>
+              <h3>Individuals &amp; Families</h3>
+              <p>Find affordable coverage for you and your loved ones.</p>
+            </article>
+            <article class="coverage-card">
+              <span class="card-icon"><iconify-icon icon="lucide:users"></iconify-icon></span>
+              <h3>Pre-Existing Conditions</h3>
+              <p>Coverage options may be available.</p>
+            </article>
+            <article class="coverage-card">
+              <span class="card-icon"><iconify-icon icon="lucide:baby"></iconify-icon></span>
+              <h3>Pregnant?</h3>
+              <p>Get the care and coverage you need.</p>
+            </article>
+            <article class="coverage-card">
+              <span class="card-icon"><iconify-icon icon="lucide:clipboard-check"></iconify-icon></span>
+              <h3>Can't Afford Your Plan?</h3>
+              <p>We'll help you find more affordable options.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section states-section">
+        <div class="container states-grid">
+          <div class="states-copy">
+            <h2>We Help People in These States</h2>
+            <p>Providing support across multiple states for individuals and families.</p>
+            <div class="states-list">
+              <span>AL</span><span>AK</span><span>AZ</span><span>AR</span><span>DE</span><span>FL</span><span>GA</span><span>IL</span><span>IN</span><span>IA</span>
+              <span>KS</span><span>LA</span><span>MI</span><span>MS</span><span>MO</span><span>OH</span><span>OK</span><span>OR</span><span>SC</span><span>TN</span>
+              <span>UT</span><span>VA</span><span>WV</span><span>WI</span><span>WY</span>
             </div>
           </div>
+          <figure class="states-media">
+            <img src="images/states-map.png" alt="Map of states served">
+          </figure>
+        </div>
+      </section>
+
+      <section class="feature-strip">
+        <div class="container feature-strip-inner">
+          <ul class="feature-list">
+            <li><iconify-icon icon="lucide:circle-dollar-sign"></iconify-icon> No Cost To You</li>
+            <li><iconify-icon icon="lucide:shield-check"></iconify-icon> Trusted Carriers</li>
+            <li><iconify-icon icon="lucide:users"></iconify-icon> Bilingual Support</li>
+            <li><iconify-icon icon="lucide:headset"></iconify-icon> High Volume Ready</li>
+          </ul>
+          <a href="tel:8009883052" class="feature-cta">
+            <iconify-icon icon="lucide:message-circle"></iconify-icon>
+            <span>Let's Find Your Coverage Today<br><strong>800-988-3052</strong></span>
+          </a>
         </div>
       </section>
 
@@ -55,9 +131,9 @@
         </div>
       </section>
 
-      <section id="services" class="section services-section">
+      <section id="agents" class="section services-section">
         <div class="container">
-          <h2 class="section-title">How We Support Our Agents</h2>
+          <h2 class="section-title">Agent Opportunities: How We Support Our Agents</h2>
           <div class="support-grid">
             <article class="support-card">
               <span class="card-icon"><iconify-icon icon="lucide:user-plus"></iconify-icon></span>
@@ -82,8 +158,8 @@
         <div class="form-wrap">
           <div class="form-card">
             <div class="form-heading">
-              <h2>Stay Connected</h2>
-              <p>Join the Mentor Advisors communication network</p>
+              <h2>Let's Find Your Coverage Today</h2>
+              <p>Get a free quote or join the Mentor Advisors communication network</p>
             </div>
             <form id="updates-form" class="updates-form">
               <div class="field-grid">
@@ -95,7 +171,7 @@
                 </label>
               </div>
               <label class="field">Mobile Phone Number
-                <input type="tel" name="phone" placeholder="(754) 837-0856" autocomplete="tel">
+                <input type="tel" name="phone" placeholder="(800) 988-3052" autocomplete="tel">
               </label>
               <div class="consent-box">
                 <input type="checkbox" id="sms-consent" name="sms-consent">
@@ -119,7 +195,7 @@
           <section><h2>3. Use of Information</h2><p>Your information is used exclusively for business operations relating to our agent network, including:</p><ul><li>Providing agent training and resource updates</li><li>Sending business-development announcements</li><li>Appointment and event reminders</li><li>Compliance and operational account notifications</li></ul></section>
           <section><h2>4. Data Sharing &amp; Privacy</h2><p>We do not sell, rent, or lease our contact lists to third parties. Information collected through our SMS program will not be shared with third parties or affiliates for their own marketing purposes. Data is only shared with internal operations staff and authorized service providers required to deliver our communications.</p></section>
           <section><h2>5. Your Rights</h2><p>You have the right to opt-out of our communications at any time. For SMS, reply STOP to any message. For email, use the unsubscribe link provided in the message. You may also contact us to request access to or deletion of your personal data.</p></section>
-          <section><h2>6. Contact Us</h2><p>If you have any questions about this Privacy Policy, please contact us at:</p><address style="font-style: normal;">Mentor Advisors Equity Group LLC<br>545 NE 141st St<br>North Miami, FL 33161-3128</address><p>Email: <a href="mailto:admin@mentoradvisors.org">admin@mentoradvisors.org</a><br>Phone: 754-837-0856</p></section>
+          <section><h2>6. Contact Us</h2><p>If you have any questions about this Privacy Policy, please contact us at:</p><address style="font-style: normal;">Mentor Advisors Equity Group LLC<br>545 NE 141st St<br>North Miami, FL 33161-3128</address><p>Email: <a href="mailto:admin@mentoradvisors.org">admin@mentoradvisors.org</a><br>Phone: 800-988-3052</p></section>
         </div>
       </div>
     </main>
@@ -142,14 +218,15 @@
       <div class="container">
         <div class="footer-grid">
           <div>
-            <div class="footer-brand"><span><iconify-icon icon="lucide:shield-check"></iconify-icon></span> Mentor Advisors</div>
-            <p>Professional support and communications for the modern insurance agent network. Empowering success through connectivity.</p>
+            <div class="footer-brand"><img src="images/logo.png" alt="Mentor Advisors Equity Group logo"> Mentor Advisors</div>
+            <p>People. Coverage. Brighter Tomorrows. Affordable health insurance guidance for individuals and families, plus professional support for our agent network.</p>
           </div>
           <div>
             <h2>Contact Us</h2>
             <ul class="contact-list">
+              <li><iconify-icon icon="lucide:globe"></iconify-icon><a href="https://mentoradvisors.org">mentoradvisors.org</a></li>
               <li><iconify-icon icon="lucide:mail"></iconify-icon><a href="mailto:admin@mentoradvisors.org">admin@mentoradvisors.org</a></li>
-              <li><iconify-icon icon="lucide:phone"></iconify-icon><span>754-837-0856</span></li>
+              <li><iconify-icon icon="lucide:phone"></iconify-icon><a href="tel:8009883052">800-988-3052</a></li>
               <li><iconify-icon icon="lucide:map-pin"></iconify-icon><address style="font-style: normal;">Mentor Advisors Equity Group LLC<br>545 NE 141st St<br>North Miami, FL 33161-3128</address></li>
             </ul>
           </div>
@@ -168,3 +245,4 @@
   </div>
 </body>
 </html>
+
