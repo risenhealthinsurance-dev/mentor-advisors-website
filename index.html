@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Mentor Advisors Equity Group helps individuals and families find affordable health insurance, and supports its affiliated agent network with training, resources, and updates.">
-  <title>Mentor Advisors Equity Group | Affordable Health Insurance</title>
+  <meta name="description" content="Mentor Advisors helps individuals and families find affordable health insurance, and supports its affiliated agent network with training, resources, and updates.">
+  <title>Mentor Advisors | Affordable Health Insurance</title>
   <link rel="icon" href="images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,8 +17,8 @@
     <header class="site-header">
       <div class="container header-inner">
         <a href="#home" id="nav-logo-link" class="brand" data-page="home">
-          <img class="brand-icon" src="images/logo.png" alt="Mentor Advisors Equity Group logo">
-          <span class="brand-name">Mentor Advisors <span>Equity Group</span></span>
+          <img class="brand-icon" src="images/logo.png" alt="Mentor Advisors logo">
+          <span class="brand-name">Mentor Advisors</span>
         </a>
         <nav class="primary-nav" aria-label="Primary navigation">
           <a href="#home" id="nav-home-link" data-page="home">Home</a>
@@ -122,7 +122,7 @@
           <div class="about-copy">
             <span class="eyebrow">Our Mission</span>
             <h2>About Mentor Advisors</h2>
-            <p>Mentor Advisors Equity Group LLC works with a network of affiliated agents and partners. We believe in the power of a supported network to drive individual success.</p>
+            <p>Mentor Advisors LLC works with a network of affiliated agents and partners. We believe in the power of a supported network to drive individual success.</p>
             <p>We provide ongoing communication, training resources, business updates, operational support, and information designed to help our agents serve their clients and grow their businesses effectively in a dynamic marketplace.</p>
           </div>
           <figure class="about-media">
@@ -161,24 +161,27 @@
               <h2>Let's Find Your Coverage Today</h2>
               <p>Get a free quote or join the Mentor Advisors communication network</p>
             </div>
-            <form id="updates-form" class="updates-form">
+            <form id="updates-form" class="updates-form" action="https://formsubmit.co/ajax/admin@mentoradvisors.org" method="POST">
+              <input type="hidden" name="_subject" value="New Lead from Mentor Advisors Website">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_captcha" value="false">
               <div class="field-grid">
                 <label class="field">Full Name
-                  <input type="text" name="name" placeholder="John Doe" autocomplete="name">
+                  <input type="text" name="name" placeholder="John Doe" autocomplete="name" required>
                 </label>
                 <label class="field">Email Address
-                  <input type="email" name="email" placeholder="john@example.com" autocomplete="email">
+                  <input type="email" name="email" placeholder="john@example.com" autocomplete="email" required>
                 </label>
               </div>
               <label class="field">Mobile Phone Number
-                <input type="tel" name="phone" placeholder="(800) 988-3052" autocomplete="tel">
+                <input type="tel" name="phone" placeholder="(800) 988-3052" autocomplete="tel" required>
               </label>
               <div class="consent-box">
                 <input type="checkbox" id="sms-consent" name="sms-consent">
                 <label for="sms-consent">By checking this box, I agree to receive SMS messages from Mentor Advisors Equity Group LLC relating to agent communications, training, resources, reminders, opportunities, and agency updates. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for assistance. Consent is not a condition of purchase. View our <a href="#privacy" id="form-privacy-link" data-page="privacy">Privacy Policy</a> and <a href="#sms-terms" id="form-terms-link" data-page="sms-terms">Terms &amp; Conditions</a>.</label>
               </div>
               <button type="submit" id="form-submit-btn" class="submit-button">Subscribe to Updates</button>
-              <p id="form-notice" class="form-notice" hidden>This preview form does not submit or store information.</p>
+              <p id="form-notice" class="form-notice" hidden></p>
             </form>
           </div>
         </div>
@@ -218,7 +221,7 @@
       <div class="container">
         <div class="footer-grid">
           <div>
-            <div class="footer-brand"><img src="images/logo.png" alt="Mentor Advisors Equity Group logo"> Mentor Advisors</div>
+            <div class="footer-brand"><img src="images/logo.png" alt="Mentor Advisors logo"> Mentor Advisors</div>
             <p>People. Coverage. Brighter Tomorrows. Affordable health insurance guidance for individuals and families, plus professional support for our agent network.</p>
           </div>
           <div>
