@@ -34,8 +34,51 @@ export function initializeSite(documentRef = document, windowRef = window) {
     });
   });
 
-  documentRef.getElementById("updates-form")?.addEventListener("submit", (event) => {
+  const form = documentRef.getElementById("updates-form");
+  const notice = documentRef.getElementById("form-notice");
+  const submitBtn = documentRef.getElementById("form-submit-btn");
+
+  form?.addEventListener("submit", async (event) => {
     event.preventDefault();
+    if (!form.reportValidity()) return;
+
+    const originalLabel = submitBtn ? submitBtn.textContent : "";
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending...";
+    }
+    if (notice) {
+      notice.hidden = true;
+      notice.classList.remove("form-notice-error");
+    }
+
+    try {
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: formData,
+      });
+
+      if (!response.ok) throw new Error("Request failed");
+
+      form.reset();
+      if (notice) {
+        notice.textContent = "Thanks! Your request has been sent — we'll be in touch shortly.";
+        notice.hidden = false;
+      }
+    } catch (error) {
+      if (notice) {
+        notice.textContent = "Sorry, something went wrong sending your request. Please call us at 800-988-3052.";
+        notice.classList.add("form-notice-error");
+        notice.hidden = false;
+      }
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalLabel;
+      }
+    }
   });
 
   windowRef.addEventListener("hashchange", activateHash);
