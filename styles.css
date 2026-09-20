@@ -119,6 +119,7 @@ button, input { font: inherit; }
 .submit-button { width: 100%; padding: 1rem; color: #fff; background: var(--accent-green); border: 0; border-radius: 999px; box-shadow: 0 10px 20px rgba(60,171,68,0.25); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; cursor: pointer; transition: background 0.2s ease; }
 .submit-button:hover { background: #339c3b; }
 .form-notice { margin: -0.5rem 0 0; color: var(--muted); text-align: center; font-size: 0.875rem; }
+.form-notice-error { color: #c0392b; }
 
 .legal-page { padding: 6rem 0; background: #fff; }
 .legal-container { width: min(calc(100% - 3rem), 56rem); margin-inline: auto; }
