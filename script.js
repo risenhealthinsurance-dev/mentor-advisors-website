@@ -34,10 +34,6 @@ export function initializeSite(documentRef = document, windowRef = window) {
     });
   });
 
-  documentRef.getElementById("updates-form")?.addEventListener("submit", (event) => {
-    event.preventDefault();
-  });
-
   windowRef.addEventListener("hashchange", activateHash);
   activateHash();
 }

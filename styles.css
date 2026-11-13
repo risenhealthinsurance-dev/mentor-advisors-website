@@ -71,17 +71,9 @@ button, input { font: inherit; }
 .form-heading { padding: 2.5rem 2rem; color: #fff; text-align: center; background: var(--primary-blue); }
 .form-heading h2 { margin: 0; font-size: 1.875rem; line-height: 1.2; }
 .form-heading p { margin: 0.5rem 0 0; color: #dbeafe; }
-.updates-form { display: grid; gap: 1.5rem; padding: 3rem; }
-.field-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
-.field { display: grid; gap: 0.5rem; color: #374151; font-size: 0.875rem; font-weight: 700; }
-.field input { width: 100%; padding: 0.8rem 1rem; color: #111827; background: #fff; border: 1px solid #d1d5db; border-radius: 8px; outline: none; }
-.field input:focus { border-color: var(--accent-blue); box-shadow: 0 0 0 2px rgba(0,102,204,0.1); }
-.consent-box { display: flex; align-items: flex-start; gap: 0.75rem; padding: 1rem; color: #4b5563; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; font-size: 0.875rem; line-height: 1.6; }
-.consent-box input { flex: 0 0 auto; width: 20px; height: 20px; margin-top: 0.15rem; accent-color: var(--accent-blue); }
-.consent-box a { color: var(--accent-blue); text-decoration: underline; }
-.submit-button { width: 100%; padding: 1rem; color: #fff; background: var(--accent-blue); border: 0; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,102,204,0.18); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; cursor: pointer; transition: background 0.2s ease; }
-.submit-button:hover { background: var(--primary-blue); }
-.form-notice { margin: -0.5rem 0 0; color: var(--muted); text-align: center; font-size: 0.875rem; }
+.contact-action { display: flex; justify-content: center; padding: 1.75rem 2rem; }
+.contact-action .button { color: #fff; background: var(--primary-blue); border-color: var(--primary-blue); }
+.contact-action .button:hover { background: var(--accent-blue); border-color: var(--accent-blue); }
 
 .legal-page { padding: 6rem 0; background: #fff; }
 .legal-container { width: min(calc(100% - 3rem), 56rem); margin-inline: auto; }
@@ -119,11 +111,11 @@ button, input { font: inherit; }
   .hero p { font-size: 1.05rem; }
   .hero-actions { flex-direction: column; align-items: stretch; }
   .section { padding: 4.5rem 0; }
-  .about-grid, .support-grid, .footer-grid, .field-grid { grid-template-columns: 1fr; }
+  .about-grid, .support-grid, .footer-grid { grid-template-columns: 1fr; }
   .about-grid { gap: 2.5rem; }
   .section-title { margin-bottom: 2.5rem; }
   .support-grid { gap: 1.25rem; }
-  .updates-form { padding: 2rem 1.25rem; }
+  .contact-action { padding: 1.5rem 1.25rem; }
   .form-heading { padding: 2rem 1.25rem; }
   .legal-page { padding: 4rem 0; }
   .legal-page > .legal-container > h1 { font-size: 2.125rem; }

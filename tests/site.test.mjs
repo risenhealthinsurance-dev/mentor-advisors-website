@@ -12,18 +12,23 @@ test("contains all approved content views", () => {
   }
 });
 
-test("keeps consent unchecked and the form locally controlled", () => {
-  assert.match(html, /id="updates-form"/);
-  assert.match(html, /id="sms-consent"/);
-  assert.doesNotMatch(html, /id="sms-consent"[^>]*\schecked(?:\s|>|=)/);
-  assert.doesNotMatch(html, /<form[^>]+action=/);
+test("links both quote buttons directly to the hosted form", () => {
+  for (const id of ["hero-cta-primary", "contact-cta-primary"]) {
+    const link = html.match(new RegExp(`<a[^>]*id="${id}"[^>]*>Get a Free Quote`));
+    assert.ok(link, `Missing quote CTA ${id}`);
+    assert.ok(link[0].includes('href="https://form.jotform.com/263097150611149"'));
+    assert.doesNotMatch(link[0], /data-scroll-target|target=/);
+  }
+  assert.doesNotMatch(html, /id="updates-form"/);
 });
 
-test("contains required A2P disclosures", () => {
-  assert.match(html, /Message frequency varies/);
-  assert.match(html, /Message and data rates may apply/);
-  assert.match(html, /Reply STOP to opt out or HELP for assistance/);
-  assert.match(html, /Consent is not a condition of purchase/);
+test("contains required A2P disclosures on the SMS terms page", () => {
+  const terms = html.split('id="sms-terms-page"')[1];
+  assert.match(terms, /Message frequency varies/);
+  assert.match(terms, /Message and data rates may apply/);
+  assert.match(terms, /STOP/);
+  assert.match(terms, /HELP/);
+  assert.match(terms, /Consent to receive .* is not required/);
 });
 
 test("shows the business address in both compliance contact locations", () => {
